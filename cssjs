@@ -1,0 +1,361 @@
+PS C:\Users\Admin\Desktop\todolist> node --version
+v18.16.1
+PS C:\Users\Admin\Desktop\todolist> npm --version
+9.5.1
+PS C:\Users\Admin\Desktop\todolist> express --version
+4.16.1
+PS C:\Users\Admin\Desktop\todolist> npm install -g express -generator
+
+added 58 packages in 11s
+
+8 packages are looking for funding
+  run `npm fund` for details
+PS C:\Users\Admin\Desktop\todolist> npm fund
+todolist
+
+PS C:\Users\Admin\Desktop\todolist> express
+
+  warning: the default view engine will not be jade in future releases
+  warning: use `--view=jade' or `--help' for additional options
+
+
+   create : public\
+   create : public\javascripts\
+   create : public\images\
+   create : public\stylesheets\
+   create : public\stylesheets\style.css
+   create : routes\
+   create : routes\index.js
+   create : routes\users.js
+   create : views\
+   create : views\error.jade
+   create : views\index.jade
+   create : views\layout.jade
+   create : app.js
+   create : package.json
+   create : bin\
+   create : bin\www
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=todolist:* & npm start
+
+PS C:\Users\Admin\Desktop\todolist> npm install
+npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
+npm WARN deprecated constantinople@3.0.2: Please update to at least constantinople 3.1.1
+npm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+
+added 99 packages, and audited 100 packages in 5s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (1 low, 4 high, 3 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\Admin\Desktop\todolist> npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit Updating jade to 1.9.2, which is a SemVer major change.
+npm WARN audit Updating express to 4.18.2, which is outside your stated dependency range.
+npm WARN deprecated jade@1.9.2: Jade has been renamed to pug, please install the latest version of pug instead of jade
+
+added 37 packages, removed 24 packages, changed 16 packages, and audited 113 packages in 3s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+constantinople  <3.1.1
+Severity: critical
+Sandbox Bypass Leading to Arbitrary Code Execution in constantinople - https://github.com/advisories/GHSA-4vmm-mhcq-4x9j
+fix available via `npm audit fix --force`
+Will install jade@0.31.2, which is a breaking change
+node_modules/constantinople
+  jade  >=0.30.0
+  Depends on vulnerable versions of constantinople
+  Depends on vulnerable versions of transformers
+  node_modules/jade
+
+uglify-js  <=2.5.0
+Severity: critical
+Regular Expression Denial of Service in uglify-js - https://github.com/advisories/GHSA-c9f4-xj24-8jqx
+Incorrect Handling of Non-Boolean Comparisons During Minification in uglify-js - https://github.com/advisories/GHSA-34r7-q49f-h37c
+fix available via `npm audit fix --force`
+Will install jade@0.31.2, which is a breaking change
+node_modules/uglify-js
+  transformers  >=2.0.0
+  Depends on vulnerable versions of uglify-js
+  node_modules/transformers
+
+4 vulnerabilities (1 high, 3 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+PS C:\Users\Admin\Desktop\todolist> npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit Updating jade to 0.31.2, which is a SemVer major change.
+npm WARN deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated jade@0.31.2: Jade has been renamed to pug, please install the latest version of pug instead of jade
+npm WARN deprecated transformers@2.0.1: Deprecated, use jstransformer
+
+added 11 packages, removed 8 packages, changed 7 packages, and audited 116 packages in 3s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+uglify-js  <=2.5.0
+Severity: critical
+Regular Expression Denial of Service in uglify-js - https://github.com/advisories/GHSA-c9f4-xj24-8jqx
+Incorrect Handling of Non-Boolean Comparisons During Minification in uglify-js - https://github.com/advisories/GHSA-34r7-q49f-h37c
+fix available via `npm audit fix --force`
+Will install jade@0.29.0, which is a breaking change
+node_modules/uglify-js
+  transformers  >=2.0.0
+  Depends on vulnerable versions of uglify-js
+  node_modules/transformers
+    jade  >=0.30.0
+    Depends on vulnerable versions of transformers
+    node_modules/jade
+
+3 vulnerabilities (2 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+PS C:\Users\Admin\Desktop\todolist> npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit Updating jade to 0.29.0, which is a SemVer major change.
+npm WARN deprecated jade@0.29.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+npm WARN deprecated transformers@1.8.3: Deprecated, use jstransformer
+
+removed 13 packages, changed 3 packages, and audited 103 packages in 802ms
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Admin\Desktop\todolist> SET DEBUG=todolist:* & npm start
+At line:1 char:22
++ SET DEBUG=todolist:* & npm start
++                      ~
+The ampersand (&) character is not allowed. The & operator is reserved for future use; wrap an ampersand in double quotation marks ("&") to pass it as part of a string.        
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : AmpersandNotAllowed
+
+PS C:\Users\Admin\Desktop\todolist> SET DEBUG=todolist:*
+PS C:\Users\Admin\Desktop\todolist> npm start
+
+> todolist@0.0.0 start
+> node ./bin/www
+
+Terminate batch job (Y/N)? y
+PS C:\Users\Admin\Desktop\todolist> express
+
+  warning: the default view engine will not be jade in future releases
+  warning: use `--view=jade' or `--help' for additional options
+
+destination is not empty, continue? [y/N] y
+
+   create : public\
+   create : public\javascripts\
+   create : public\images\
+   create : public\stylesheets\
+   create : public\stylesheets\style.css
+   create : routes\
+   create : routes\index.js
+   create : routes\users.js
+   create : views\
+   create : views\error.jade
+   create : views\index.jade
+   create : views\layout.jade
+   create : app.js
+   create : package.json
+   create : bin\
+   create : bin\www
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=todolist:* & npm start
+
+PS C:\Users\Admin\Desktop\todolist> SET DEBUG=todolist:*,npm start  
+PS C:\Users\Admin\Desktop\todolist> SET DEBUG=todolist:*,npm start
+>> ^C
+PS C:\Users\Admin\Desktop\todolist> npm start
+
+> todolist@0.0.0 start
+> node ./bin/www
+
+Terminate batch job (Y/N)? y
+PS C:\Users\Admin\Desktop\todolist> nodemon
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node ./bin/www`
+GET / 200 28.709 ms - 170
+GET /stylesheets/style.css 200 5.347 ms - 111
+GET /favicon.ico 404 11.502 ms - 1522
+ReferenceError: C:\Users\Admin\Desktop\todolist\views\error.jade:4
+    2|
+    3| block content
+  > 4|   h1= message
+    5|   h2= error.status
+    6|   pre #{error.stack}
+    7|
+
+title is not defined
+    at eval (eval at exports.compile (C:\Users\Admin\Desktop\todolist\node_modules\jade\lib\jade.js:171:8), <anonymous>:18:58)
+    at C:\Users\Admin\Desktop\todolist\node_modules\jade\lib\jade.js:172:35
+    at exports.render (C:\Users\Admin\Desktop\todolist\node_modules\jade\lib\jade.js:206:14)
+    at exports.renderFile [as engine] (C:\Users\Admin\Desktop\todolist\node_modules\jade\lib\jade.js:233:13)
+    at View.render (C:\Users\Admin\Desktop\todolist\node_modules\express\lib\view.js:135:8)
+    at tryRender (C:\Users\Admin\Desktop\todolist\node_modules\express\lib\application.js:657:10)
+    at Function.render (C:\Users\Admin\Desktop\todolist\node_modules\express\lib\application.js:609:3)
+    at ServerResponse.render (C:\Users\Admin\Desktop\todolist\node_modules\express\lib\response.js:1039:7)
+    at C:\Users\Admin\Desktop\todolist\app.js:38:7
+    at Layer.handle_error (C:\Users\Admin\Desktop\todolist\node_modules\express\lib\router\layer.js:71:5)
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+GET / 200 19.561 ms - 179
+GET /stylesheets/style.css 304 15.632 ms - -
+^C
+PS C:\Users\Admin\Desktop\todolist> express --view=pug -git
+
+  Usage: express [options] [dir]
+
+  Options:
+
+        --version        output the version number
+    -e, --ejs            add ejs engine support
+        --pug            add pug engine support
+        --hbs            add handlebars engine support
+    -H, --hogan          add hogan.js engine support
+    -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+        --no-view        use static html instead of view engine
+    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+        --git            add .gitignore
+    -f, --force          force on non-empty directory
+    -h, --help           output usage information
+
+  error: unknown option `-g'
+
+PS C:\Users\Admin\Desktop\todolist> ^C
+PS C:\Users\Admin\Desktop\todolist> express --view=pug --git
+destination is not empty, continue? [y/N] y
+
+   create : public\
+   create : public\javascripts\
+   create : public\images\
+   create : public\stylesheets\
+   create : public\stylesheets\style.css
+   create : routes\
+   create : routes\index.js
+   create : routes\users.js
+   create : views\
+   create : views\error.pug
+   create : views\index.pug
+   create : views\layout.pug
+   create : .gitignore
+   create : app.js
+   create : package.json
+   create : bin\
+   create : bin\www
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=todolist:* & npm start
+
+PS C:\Users\Admin\Desktop\todolist> npm install
+npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+
+added 66 packages, removed 43 packages, changed 13 packages, and audited 126 packages in 18s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+7 vulnerabilities (2 low, 5 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\Admin\Desktop\todolist> npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit Updating pug to 2.0.4, which is outside your stated dependency range.
+npm WARN audit Updating express to 4.18.2, which is outside your stated dependency range.
+
+added 34 packages, removed 6 packages, changed 21 packages, and audited 154 packages in 5s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+pug  <3.0.1
+Severity: high
+Remote code execution via the `pretty` option. - https://github.com/advisories/GHSA-p493-635q-r6gr
+fix available via `npm audit fix --force`
+Will install pug@3.0.2, which is a breaking change
+node_modules/pug
+
+1 high severity vulnerability
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+PS C:\Users\Admin\Desktop\todolist> npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit Updating pug to 3.0.2, which is a SemVer major change.
+
+added 6 packages, removed 30 packages, changed 19 packages, and audited 130 packages in 3s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Admin\Desktop\todolist> npm start
+
+> todolist@0.0.0 start
+> node ./bin/www
+
+GET / 200 714.762 ms - 170
+GET /stylesheets/style.css 200 22.457 ms - 111
+GET / 304 19.259 ms - -
+GET /stylesheets/style.css 304 13.845 ms - -
+GET / 304 12.035 ms - -
+GET /stylesheets/style.css 304 1.008 ms - -
+Terminate batch job (Y/N)? y
+PS C:\Users\Admin\Desktop\todolist> npm start
+
+> todolist@0.0.0 start
+> node ./bin/www
+
+GET / 304 114.597 ms - -
+GET /stylesheets/style.css 304 1.658 ms - -
+GET / 304 17.728 ms - -
+GET /stylesheets/style.css 304 0.550 ms - -
+^Terminate batch job (Y/N)? y
+PS C:\Users\Admin\Desktop\todolist> npm start
+
+> todolist@0.0.0 start
+> node ./bin/www
+
+GET / 304 116.956 ms - -
+GET /stylesheets/style.css 304 1.122 ms - -
